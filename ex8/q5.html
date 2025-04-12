@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+ 
+<body>
+    <h1>Javascript Program</h1>
+    <button onclick="e1()">Enter Reg. No</button>
+    <button onclick="e2()">Enter Name</button>
+    <h3>Registration Number:</h3>
+    <div id="reg">
+       
+    </div>
+    <h3>Name:</h3>
+    <div id="name">
+ 
+    </div>
+ 
+ 
+</body>
+<script>
+    function e1(){
+        let n1 = prompt("Enter Registration Number:");
+        document.getElementById("reg").innerHTML = ` <div style="height: 30px;width: 100px;border:15px solid red; padding:10px; text-align:center;" >${n1}</div>`
+    }
+    function e2(){
+        let n2 = prompt("Enter Name:");
+        document.getElementById("name").innerHTML = ` <div style="height: 30px;width: 100px;border:2px solid black; padding:10px; text-align:center; font-size:30px;color:red;" >${n2}</div>`
+    }
+</script>
+</html>
+ 

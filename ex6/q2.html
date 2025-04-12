@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        td {
+            border: 0px solid;
+            width: 65px;
+            height: 40px;
+            text-align: center;
+            border-radius: 4px;
+            box-shadow: 0px 3px rgb(79, 151, 163);
+            cursor: pointer;
+        }
+
+        .pink {
+            background-color: pink;
+        }
+
+        .darkpink {
+            background-color: rgb(245, 84, 111);
+            box-shadow: 0px 3px rgb(167, 57, 75);
+        }
+
+        .input {
+            width: 220px;
+            height: 40px;
+            background-color: rgb(121, 164, 204);
+            box-shadow: 0px 0px 5px 0px;
+            text-align: right;
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        table {
+            background-color: rgb(134, 234, 252);
+            padding: 10px;
+            border-spacing: 6px;
+            margin: 30px auto;
+        }
+
+        .no {
+            background-color: rgb(255, 255, 255);
+        }
+
+        .no2 {
+            background-color: rgb(247, 222, 226);
+        }
+
+        .no3 {
+            background-color: rgb(158, 243, 30);
+        }
+
+        .no4 {
+            background-color: rgb(170, 146, 192);
+        }
+
+        td:hover {
+            background-color: rgb(229, 255, 85);
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <td class="darkpink" onclick="clearDisplay()">C</td>
+            <td colspan="3"><div class="input" id="display"></div></td>
+        </tr>
+        <tr>
+            <td class="no" onclick="appendValue('7')">7</td>
+            <td class="no" onclick="appendValue('8')">8</td>
+            <td class="no" onclick="appendValue('9')">9</td>
+            <td class="no2" onclick="appendValue('*')">*</td>
+        </tr>
+        <tr>
+            <td class="no" onclick="appendValue('4')">4</td>
+            <td class="no" onclick="appendValue('5')">5</td>
+            <td class="no" onclick="appendValue('6')">6</td>
+            <td class="no2" onclick="appendValue('-')">-</td>
+        </tr>
+        <tr>
+            <td class="no4" onclick="appendValue('1')">1</td>
+            <td class="no" onclick="appendValue('2')">2</td>
+            <td class="no" onclick="appendValue('3')">3</td>
+            <td class="no2" onclick="appendValue('+')">+</td>
+        </tr>
+        <tr>
+            <td class="no" onclick="appendValue('0')">0</td>
+            <td class="no" onclick="appendValue('.')">.</td>
+            <td class="no3" onclick="calculateResult()">=</td>
+            <td class="no2" onclick="appendValue('/')">/</td>
+        </tr>
+    </table>
+
+    <script>
+        const display = document.getElementById("display");
+
+        function appendValue(val) {
+            display.textContent += val;
+        }
+
+        function clearDisplay() {
+            display.textContent = "";
+        }
+
+        function calculateResult() {
+            try {
+                display.textContent = eval(display.textContent);
+            } catch (e) {
+                display.textContent = "Error";
+            }
+        }
+    </script>
+
+</body>
+</html>
