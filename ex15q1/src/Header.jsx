@@ -2,8 +2,8 @@ function Header({title}) {
     return (
      
       <>
-      <div style={{backgroundColor:"red",height:"40px",padding:"10px",textAlign:"center"}}>
-          <h2>{title}</h2>
+      <div style={{position:"fixed",top:"0px",backgroundColor:"red",width:"100vw",textAlign:"center"}}>
+          <h2 style={{fontSize:"30px"}}>{title}</h2>
          
       </div>
       </>

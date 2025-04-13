@@ -28,11 +28,14 @@ function Content() {
     return (
    
     <>
-    <div style={{padding:"20px",textAlign:"center",marginTop:"100px"}}>
+    <div style={{width:"100vw"}}>
+
+    <div style={{textAlign:"center",display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center"}}>
         <h3>Click the button to generate a random joke</h3>
         <button style={{padding:"10px"}} onClick={handleclick}>Generate a joke</button>
         <br/> <br/>
-        <p style={{backgroundColor:"bisque",padding:"20px",width:"400px",textAlign:"center",margin:"auto"}}>{joke}</p>
+        <p style={{backgroundColor:"bisque",color:"black",padding:"20px",width:"400px",textAlign:"center",margin:"auto"}}>{joke}</p>
+    </div>
     </div>
     </>
   );
